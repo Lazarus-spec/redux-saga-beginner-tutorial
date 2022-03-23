@@ -1,16 +1,21 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
-
-const Counter = ({ dispatch}) =>{
-    const handleClick = ()=>{
-        dispatch({type:'initTest'})
+const Counter = ({dispatch}) =>{
+    const handleEvery = ()=>{
+        dispatch({type:'takeEvery',user:{name:'lanziwen',pwd:'123'}})
+    }
+    const handleLatest = ()=>{
+        dispatch({type:'takeLatest',user:{name:'lanziwen',pwd:'123'}})
+    }
+    const handleThrottle = ()=>{
+        dispatch({type:'throttle',user:{name:'lanziwen',pwd:'123'}})
     }
 
    return <div>
-        <button onClick={handleClick}>
-          click
-        </button>
+        <button onClick={handleEvery}>click1</button>
+        <button onClick={handleLatest}>click2</button>
+        <button onClick={handleThrottle}>click3</button>
     </div>
 }
 
