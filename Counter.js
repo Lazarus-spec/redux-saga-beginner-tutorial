@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 
 const Counter = ({dispatch}) =>{
     const handleEvery = ()=>{
-        dispatch({type:'takeEvery',user:{name:'lanziwen',pwd:'123'}})
+        dispatch({type:'takeEvery',user:{name:'lanziwen',pwd:'123'},data:{name:"hqins"}})
     }
     const handleLatest = ()=>{
         dispatch({type:'takeLatest',user:{name:'lanziwen',pwd:'123'}})
