@@ -21,5 +21,11 @@
     - call 发送远程请求
     - take 拦截
      - put 用来发送action的，可以被reducers.js捕捉
+- 组合器： all
+```js
+    yield all([loginSaga().listSage()])
+```
+ 
+ 
  
  
